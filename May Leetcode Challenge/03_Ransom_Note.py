@@ -20,7 +20,7 @@ class Solution:
                 break
         return label
 class Test(unittest.TestCase):
-    t0 = [
+    testcases  = [
         ("a", "b", False),
         ("aa", "ab", False),
         ("aa", "aab", True),
@@ -32,10 +32,10 @@ class Test(unittest.TestCase):
     s = Solution()
 
     def test0(self):
-        for testcase in self.t0:
+        for testcase in self.testcases:
             ransomNote, magazine, expected = testcase[0], testcase[1], testcase[2]
             actual = self.s.canConstruct(ransomNote, magazine)
             self.assertEqual(actual, expected)
 
-
-unittest.main()
+if __name__=="__main__":
+    unittest.main()
